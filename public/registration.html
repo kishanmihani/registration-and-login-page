@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Page</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    </head>
+  <script>
+    function validation(){
+        if(document.registration.name.value==""){
+            alert("Please Enter your name");
+            document.registration.name.focus();
+            return false;
+        }
+        if(document.registration.email.value==""){
+            alert("Please Enter your email ID");
+            document.registration.name.focus();
+            return false;
+        }
+        if(document.registration.phone.value==""){
+            alert("Please Enter your mobile number");
+            document.registration.name.focus();
+            return false;
+        }
+        
+        if(document.registration.password.value==""){
+            alert("Please Enter your password");
+            document.registration.name.focus();
+            return false;
+        }
+        return true;
+    }
+      </script>
+      <style>
+          input{
+              margin:5px;
+          }
+      </style>
+    <body>
+        <div style="text-align: center;" class="form-group"><h2 style="color: red;"><u>Registration page</u></h2>
+            <form action="/signup" method="POST" name="registration" onsubmit="return(validation());" >
+                
+                <input  type="text" name="name"  placeholder="name" style="width:190px;height:25px;border-radius: 17.5px;">
+                <br>
+                <input type="text" name="email" placeholder="email" style="width:190px;height:25px;border-radius: 17.5px;">
+                <br>
+                <input type="text" name="phone" placeholder="phone" style="width:190px;height:25px;border-radius: 17.5px;">
+                <br>
+                <input type="text" name="password" placeholder="password" style="width:190px;height:25px;border-radius: 17.5px;">
+                <br>
+                <input type="submit" value="Submit" id="submit" style="background-color:red;color:white;border:1px solid black;border-radius: 17.5px;width:80px;height:25px;">
+            </form>
+        </div>
+        
+    </body>
+</html>

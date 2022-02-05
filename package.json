@@ -1,0 +1,33 @@
+{
+  "name": "myapp",
+  "version": "1.0.0",
+  "description": "API with Nodejs , express and mongodb use",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kishanmihani/registration-and-login-page.git"
+  },
+  "keywords": [
+    "nodejs",
+    "Express",
+    "js"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kishanmihani/registration-and-login-page/issues"
+  },
+  "homepage": "https://github.com/kishanmihani/registration-and-login-page#readme",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "bootstrap": "^5.1.3",
+    "express": "^4.17.2",
+    "http": "0.0.1-security",
+    "mongodb": "^4.3.1",
+    "mongoose": "^6.2.0",
+    "nodemon": "^2.0.15"
+  }
+}

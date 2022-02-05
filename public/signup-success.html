@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Signup Page</title>
+    </head>
+    <script>
+        function validform(){
+            if(document.login.password.value==""){
+            alert("Please Enter your password");
+            document.registration.name.focus();
+            return false;
+        }
+        if(document.registration.email.value==""){
+            alert("Please Enter your email");
+            document.registration.name.focus();
+            return false;
+        }
+        return true;
+        }
+    </script>
+    <body>
+        <div style="text-align: center;">
+        <h1 style="color:red"><u>Login Successfully</u></h1>
+        <form action="signup-login-successfully.html" method="POST" name="login" onsubmit="return(validform);">
+            <dl>
+                <dd><input type="text" name="email" placeholder="Enter email" style="width:190px;height:25px;border-radius: 17.5px;" ></dd>
+                <br>
+                <dd><input type="text" name="password" placeholder="Enter Password" style="width:190px;height:25px;border-radius: 17.5px;"></dd>
+            </dl>
+            <input type="submit" value="Login" style="background-color:red;color:white;border:1px solid black; width:80px;height:25px;border-radius: 17.5px;" >
+        </form></div>
+    </body>
+</html>
