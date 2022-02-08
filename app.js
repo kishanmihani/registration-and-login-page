@@ -58,7 +58,7 @@ app.post("/signup-login-successfully.html", function (req, res) {
         "password": password
 
     }
-    db.collection('tbleper').find(dat).toArray(function (err, documents) {
+    db.collection('tbleper').find(dat).toArray(function (err, collection) {
         if (!err) {
             console.log(documents);
             return res.redirect('/signup-login-successfully.html');
@@ -70,7 +70,25 @@ app.post("/signup-login-successfully.html", function (req, res) {
 
 
 })
+//Forget-Password in proccess
+app.post("/signup-success", function (req, res) {
+    var email = req.body.email;
+    var password = req.body.password;
+    var finddocument = { "email": email };
+    var newPassword = { $set: { "password": password } };
+    db.collection('tblper').updateOne(finddocument, newPassword, function (err, documents) {
+        if (!err) {
+            console.log(documents);
+            console.log("record update");
 
+        }
+        else {
+            console.log(err.message);
+        }
+    })
+    //console.log("2:-" + err)
+    return res.redirect("/signup-success.html");
+})
 
 app.get("/", (req, res) => {
     res.set({
